@@ -1,45 +1,444 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Timmy Trapaidze's Personal Website</title>
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Welcome!</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	
+	
+	<!-- Font -->
+	
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700%7CAllura" rel="stylesheet">
+	
+	<!-- Stylesheets -->
+	
+	<link href="common-css/bootstrap.css" rel="stylesheet">
+	
+	<link href="common-css/ionicons.css" rel="stylesheet">
+	
+	<link href="common-css/fluidbox.min.css" rel="stylesheet">
+	
+	<link href="01-cv-portfolio/css/styles.css" rel="stylesheet">
+	
+	<link href="01-cv-portfolio/css/responsive.css" rel="stylesheet">
+	
+</head>
+<body>
+	
+	<header>
+		<div class="container">
+			<div class="heading-wrapper">
+				<div class="row">
+					<div class="col-sm-6 col-md-6 col-lg-4">
+						<div class="info">
+							<i class="icon ion-ios-location-outline"></i>
+							<div class="right-area">
+								<h5>D.C. METRO AREA</h5>
+								<h5>WILLING TO RELOCATE</h5>
+							</div><!-- right-area -->
+						</div><!-- info -->
+					</div><!-- col-sm-4 -->
+					
+					<div class="col-sm-6 col-md-6 col-lg-4">
+						<div class="info">
+							<i class="icon ion-ios-telephone-outline"></i>
+							<div class="right-area">
+								<h5>202-604-4175</h5>
+								<h6>LEAVE A MESSAGE</h6>
+							</div><!-- right-area -->
+						</div><!-- info -->
+					</div><!-- col-sm-4 -->
+					
+					<div class="col-sm-6 col-md-6 col-lg-4">
+						<div class="info">
+							<i class="icon ion-ios-chatboxes-outline"></i>
+							<div class="right-area">
+								<h5>ttrapaid@umd.edu</h5>
+								<h6>REPLY IN 24 HOURS</h6>
+							</div><!-- right-area -->
+						</div><!-- info -->
+					</div><!-- col-sm-4 -->
+				</div><!-- row -->
+			</div><!-- heading-wrapper -->
+			
+			<a class="downlad-btn" href="#">Download Resume</a>
+		</div><!-- container -->
+	</header>
+	
+	<section class="intro-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-1 col-lg-2"></div>
+				<div class="col-md-10 col-lg-8">
+					<div class="intro">
+						<div class="profile-img"><img src="casual.jpg" alt=""></div>
+						<h2><b>Timmy Trapaidze</b></h2>
+						<h4 class="font-yellow">Software Engineer</h4>
+						<ul class="information margin-tb-30">
+							<li>University of Maryland, College Park</li>
+							<li>Physics & Computer Science</li>
+							<li>College Park Scholars</li>
+							<li>Hinman CEOs</li>
+							<li>Presidential Scholar</li>
+						</ul>
+						<ul class="social-icons">
+							<li><a href="https://www.linkedin.com/in/timmy-trapaidze/" target="_blank"><i class="ion-social-linkedin"></i></a></li>
+							<li><a href="https://github.com/ttrapaid/" target="_blank"><i class="ion-social-github"></i></a></li>
+						</ul>
+					</div><!-- intro -->
+				</div><!-- col-sm-8 -->
+			</div><!-- row -->
+		</div><!-- container -->
+	</section><!-- intro-section -->
+	
+	<section class="portfolio-section section">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="heading">
+						<h3><b>Portfolio</b></h3>
+						<h6 class="font-lite-black"><b>MY WORK</b></h6>
+					</div>
+				</div><!-- col-sm-4 -->
+				<div class="col-sm-8">
+					<div class="portfolioFilter clearfix margin-b-80">
+						<a href="#" data-filter="*" class="current"><b>ALL</b></a>
+						<a href="#" data-filter=".research"><b>RESEARCH</b></a>
+						<a href="#" data-filter=".work"><b>WORK</b></a>
+						<a href="#" data-filter=".personal"><b>PERSONAL</b></a>
+					</div><!-- portfolioFilter -->
+				</div><!-- col-sm-8 -->
+			</div><!-- row -->
+		</div><!-- container -->
+		
+		<div class="portfolioContainer">
+			
+			<div class="p-item research">
+				<a href="images/ahrq.jpg" data-fluidbox>
+					<img src="images/ahrq.jpg" alt=""></a>
+			</div><!-- p-item -->
+			
+			
+			<div class="p-item personal">
+					<a href="images/sandbox.jpg" data-fluidbox>
+						<img src="images/sandbox.jpg" alt=""></a>
+				</div><!-- p-item -->
 
-    <link rel="stylesheet" href="styles/style.css">
+			<div class="p-item research">
+				<a href="images/cern.jpg" data-fluidbox>
+					<img src="images/cern.jpg" alt=""></a>
+			</div><!-- p-item -->
+			
+			<div class="p-item work" id="workImg">
+				<a href="#" onclick="smoothScroll(document.getElementById('workEp'))" data-fluidbox>
+					<img src="images/atm.jpg" alt=""></a>
+			</div><!-- p-item -->
+			
+			<div class="p-item research">
+					<a href="images/sense.jpg" data-fluidbox>
+						<img src="images/sense.jpg" alt=""></a>
+				</div><!-- p-item -->
+		
+		</div><!-- portfolioContainer -->
+		
+	</section><!-- portfolio-section -->
+	
+	
+	<section class="about-section section">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="heading">
+						<h3><b>About me</b></h3>
+						<h6 class="font-lite-black"><b>PROFESSIONAL PATH</b></h6>
+					</div>
+				</div><!-- col-sm-4 -->
+				<div class="col-sm-8">
+					<p class="margin-b-50">
+						I'm pursuing a double major in Physics and Computer Science from the University 
+						of Maryland, College Park. I've completed two internships over two summers, 
+						participated in two different research projects over the course of a year each, 
+						and I've joined various clubs on campus. I am ambitious and eager to learn as much
+						as I can in the limited time I have as a college student (one of the reasons I decided
+						to double major). 
+						<br><br>
+						Some interesting courses I've taken and will be taking this coming Fall 2019 include:<br>
+						<br><b>CMSC421</b> : Intro to Artificial Intelligence
+						<br><b>CMSC320</b> : Intro to Data Science 
+						<br><b>CMSC216</b> : Intro to Computer Systems
+						<br><b>PHYS401</b> : Intro to Quantum Physics I
+					</p>
+					
+					<div class="row">
+						<div class="col-sm-6 col-md-6 col-lg-3">
+							<div class="radial-prog-area margin-b-30">
+								<div class="radial-progress" data-prog-percent=".80">
+									<div></div>
+									<h6 class="progress-title">JAVA</h6>
+								</div>
+							</div><!-- radial-prog-area-->
+						</div><!-- col-sm-6-->
+					
+						<div class="col-sm-6 col-md-6 col-lg-3">
+							<div class="radial-prog-area margin-b-30">
+								<div class="radial-progress" data-prog-percent=".70">
+									<div></div>
+									<h6 class="progress-title">PYTHON</h6>
+								</div>
+							</div><!-- radial-prog-area-->
+						</div><!-- col-sm-6-->
+						
+						<div class="col-sm-6 col-md-6 col-lg-3">
+							<div class="radial-prog-area margin-b-30">
+								<div class="radial-progress" data-prog-percent=".60">
+									<div></div>
+									<h6 class="progress-title">C</h6>
+								</div>
+							</div><!-- radial-prog-area-->
+						</div><!-- col-sm-6-->
+						
+						<div class="col-sm-6 col-md-6 col-lg-3">
+							<div class="radial-prog-area margin-b-50">
+								<div class="radial-progress" data-prog-percent=".6">
+									<div></div>
+									<h6 class="progress-title">RUBY</h6>
+								</div>
+							</div><!-- radial-prog-area-->
+						</div><!-- col-sm-6-->
+					
+					</div><!-- row -->
+				</div><!-- col-sm-8 -->
+			</div><!-- row -->
+		</div><!-- container -->
+	</section><!-- about-section -->
+	
+	<section class="experience-section section" id="workExp">
+		<div class="container" >
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="heading">
+						<h3><b>Experience</b></h3>
+						<h6 class="font-lite-black"><b>PROFESSIONAL</b></h6>
+					</div>
+				</div><!-- col-sm-4 -->
+				<div class="col-sm-8">
+				
+					<div class="experience margin-b-50">
+						<h4><b>SOFTWARE DEVELOPER INTERN</b></h4>
+						<h5 class="font-yellow"><b>Leidos</b></h5>
+						<h6 class="margin-t-10">May 2019 - August 2019</h6>
+						<p class="font-semi-white margin-tb-30">
+								Worked with the CMAP/PGSV team in the DataComm division of the larger En Route Automation 
+								Modernization (ERAM) contract with the FAA. The contract as a whole consists of over 3 million 
+								lines of code. 
+								
+								Created and enhanced several tools for both my team and other teams in the same program. These 
+								tools were designed with the intent to increase efficiency and productivity of users by automating 
+								the processes of their day to day job as well as increasing the functionality of the tools they already use.
+								</p>
+						<ul class="list margin-b-30">
+							<li>Technologies Used: Python, Javascript, Perl, Unix</li>
+						</ul>
+					</div><!-- experience -->
 
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=family"> -->
+					<div class="experience margin-b-50">
+						<h4><b>JAVA DEVELOPER INTERN</b></h4>
+						<h5 class="font-yellow"><b>Intelligent Automation, Inc.</b></h5>
+						<h6 class="margin-t-10">MAY 2018 - AUGUST 2018</h6>
+						<p class="font-semi-white margin-tb-30">Animated 
+								flight trajectories and paths across several airports in a metroplex, with
+								the ability to load up to a hundred paths without losing performance or stability.
+								Built tools to parse data generated by IAI systems and create XML and KML files
+								to be used by the FAA and NASA. Created programmatic processes to parse and
+								convert between XML and KML file types. Wrote utility classes that performed
+								GIS/geodesy calculations and operations. Used SVN and git and managed these
+								systems with both command-line and GUI tools. </p>
+						<ul class="list margin-b-30">
+							<li>Technologies Used: Java, Git, SVN</li>
+						</ul>
+					</div><!-- experience -->
+					
 
-    <!-- <link rel="shortcut icon" type="image/png" href="favicon.ico"/> -->
+					
+				</div><!-- col-sm-8 -->
+			</div><!-- row -->
+		</div><!-- container -->
+		
+	</section><!-- experience-section -->
+	
+	<section class="education-section section">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="heading">
+							<h3><b>Experience</b></h3>
+							<h6 class="font-lite-black"><b>PERSONAL</b></h6>
+						</div>
+					</div><!-- col-sm-4 -->
+					<div class="col-sm-8">
+						<div class="education-wrapper">
+							<div class="education margin-b-50">
+								<h4><b>AHRQ SDOH CHALLENGE</b></h4>
+								<h5 class="font-yellow"><b>DATA VISUALIZATION CHALLENGE</b></h5>
+								<h6 class="font-lite-black margin-t-10">MARCH 2019 - PRESENT</h6>
+								<p class="margin-tb-30">
+									The Agency for Healthcare Research and Quality (AHRQ) Visualization Resources of Community-Level Social Determinants of Health 
+									Challenge asked participants to create tools that support visualizing data clusters to 
+									enhance the research and analysis of community-level health services. 
+									<br><br>
+									Challenge participants were tasked with developing visualization tools that can augment 
+									the insights drawn from the analysis of medical expenditure and health care utilization 
+									data at the community level.
+									<br><br>
+									I architected and implemented a solution to the challenge using an open source system 
+									called Superset, which is managed by Apache. I created data ingestion endpoints to import 
+									publicly available data from various sources and created dashboards using Superset to 
+									visualize this data. I deployed this solution using containers onto the AWS cloud.
+									<br><br>
+									At the time of writing this, I am a Phase 1 winner of this challenge. </p>
+							</div><!-- education -->
 
-    <meta name="author" content="Timmy Trapaidze">
-    <meta name="description" content="This is my personal website.">
-    <meta name="keywords" content="hack,texter,portfolio,website">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!-- missing -->
-  </head>
-  <body>
+							<div class="education margin-b-50">
+									<h4><b>MONITORING THE ENVIRONMENT</b></h4>
+									<h5 class="font-yellow"><b>UMD ENVIRONMENTAL MONITORING LAB</b></h5>
+									<h6 class="font-lite-black margin-t-10">OCTOBER 2018 - PRESENT</h6>
+									<p class="margin-tb-30">
+										This project aims to monitor environmental conditions using a low cost smart sensor network. 
+										Carbon dioxide and other particulate matter sensors are connected to
+										Raspberry Pis that are placed across the UMD campus, throughout the city of College Park, and the surrounding Greenbelt area. Python scripts are used to measure
+										and send back the recorded data to our central repository. </p>
+							</div><!-- education -->
 
-    <div class="container">
+							<div class="education margin-b-50">
+								<h4><b>SEARCHING FOR THE KALUZA KLEIN</b></h4>
+								<h5 class="font-yellow"><b>UMD RESEARCH</b></h5>
+								<h6 class="font-lite-black margin-t-10">OCTOBER 2017 - MAY 2018</h6>
+								<p class="margin-tb-30">
+									The goal of the project is to search for particles by generating Monte Carlo 
+									simulations using C++ and Python within a Linux environment on the ROOT framework.
+									The team searches for particles such as the Higgs Boson by using a computing cluster
+									connected to the Large Hadron Collider.
+								</p>
+							</div>
 
-      <div id="header">
-        <h1>
-          Timmy Trapaidze
-        </h1>
-      </div>
+						</div><!-- education-wrapper -->
+					</div><!-- col-sm-8 -->
+				</div><!-- row -->
+			</div><!-- container -->
+			
+		</section><!-- about-section -->
 
-      <div id="navigation">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="https://www.google.com/">Google</a></li>
-        </ul>
-      </div>
+	<section class="education-section section">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="heading">
+						<h3><b>Education</b></h3>
+						<h6 class="font-lite-black"><b>ACADEMIC CAREER</b></h6>
+					</div>
+				</div><!-- col-sm-4 -->
+				<div class="col-sm-8">
+					<div class="education-wrapper">
+						<div class="education margin-b-50">
+							<h4><b>UNIVERSITY OF MARYLAND, COLLEGE PARK</b></h4>
+							<h5 class="font-yellow"><b>DEGREE IN PHYSICS & COMPUTER SCIENCE</b></h5>
+							<h6 class="font-lite-black margin-t-10">GRADUATING IN MAY 2021</h6>
+							<p class="margin-tb-30">Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales. 
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus pellentes que velit, 
+							quis consequat nulla effi citur at. Maecenas sed massa tristique.Duis non volutpat arcu, 
+							eu mollis tellus. Sed finibus aliquam neque sit amet sodales. </p>
+						</div><!-- education -->
+						
 
-      <div class="banner" id="home">
-        
-      </div>
+					</div><!-- education-wrapper -->
+				</div><!-- col-sm-8 -->
+			</div><!-- row -->
+		</div><!-- container -->
+		
+	</section><!-- about-section -->
+	
+	<section class="counter-section" id="counter">
+		<div class="container">
+			<div class="row">
+			
+				<div class="col-sm-6 col-md-6 col-lg-3">
+					<div class="counter margin-b-30">
+						<h1 class="title"><b><span class="counter-value" data-duration="400" data-count="2">0</span></b></h1>
+						<h5 class="desc"><b>Majors in Progress</b></h5>
+					</div><!-- counter -->
+				</div><!-- col-md-3-->
+				
+				<div class="col-sm-6 col-md-6 col-lg-3">
+					<div class="counter margin-b-30">
+						<h1 class="title"><b><span class="counter-value" data-duration="1400" data-count="2">0</span></b></h1>
+						<h5 class="desc"><b>Internships Completed</b></h5>
+					</div><!-- counter -->
+				</div><!-- col-md-3-->
+				
+				<div class="col-sm-6 col-md-6 col-lg-3">
+					<div class="counter margin-b-30">
+						<h1 class="title"><b><span class="counter-value" data-duration="700" data-count="7">0</span></b></h1>
+						<h5 class="desc"><b>Projects Completed</b></h5>
+					</div><!-- counter -->
+				</div><!-- col-md-3-->
+				
+				<div class="col-sm-6 col-md-6 col-lg-3">
+					<div class="counter margin-b-30">
+						<h1 class="title"><b><span class="counter-value" data-duration="2000" data-count="15">0</span></b></h1>
+						<h5 class="desc"><b>Technologies Learned</b></h5>
+					</div><!-- margin-b-30 -->
+				</div><!-- col-md-3-->
+				
+			</div><!-- row-->
+		</div><!-- container-->
+    </section><!-- counter-section-->
+	
 
-     
-    </div>
+	
+	
+	<!-- SCRIPTS -->
+	
+	<script src="common-js/jquery-3.2.1.min.js"></script>
+	
+	<script src="common-js/tether.min.js"></script>
+	
+	<script src="common-js/bootstrap.js"></script>
+	
+	<script src="common-js/isotope.pkgd.min.js"></script>
+	
+	<script src="common-js/jquery.waypoints.min.js"></script>
+	
+	<script src="common-js/progressbar.min.js"></script>
+	
+	<script src="common-js/jquery.fluidbox.min.js"></script>
+	
+	<script src="common-js/scripts.js"></script>
 
-  </body>
+	<script>
+		window.smoothScroll = function(target) {
+			var scrollContainer = target;
+			do { //find scroll container
+				scrollContainer = scrollContainer.parentNode;
+				if (!scrollContainer) return;
+				scrollContainer.scrollTop += 1;
+			} while (scrollContainer.scrollTop == 0);
+
+			var targetY = 0;
+			do { //find the top of target relatively to the container
+				if (target == scrollContainer) break;
+				targetY += target.offsetTop;
+			} while (target = target.offsetParent);
+
+			scroll = function(c, a, b, i) {
+				i++; if (i > 30) return;
+				c.scrollTop = a + (b - a) / 30 * i;
+				setTimeout(function(){ scroll(c, a, b, i); }, 20);
+			}
+			// start scrolling
+			scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+		}
+	</script>
+	
+</body>
 </html>
