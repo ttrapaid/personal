@@ -22,7 +22,9 @@
 	<link href="01-cv-portfolio/css/styles.css" rel="stylesheet">
 	
 	<link href="01-cv-portfolio/css/responsive.css" rel="stylesheet">
-	
+	<style>
+		html {scroll-behavior: smooth;}
+	</style>
 </head>
 <body>
 	
@@ -115,28 +117,28 @@
 		<div class="portfolioContainer">
 			
 			<div class="p-item research">
-				<a href="images/ahrq.jpg" data-fluidbox>
+				<a href="#ahrq" data-fluidbox>
 					<img src="images/ahrq.jpg" alt=""></a>
 			</div><!-- p-item -->
 			
 			
 			<div class="p-item personal">
-					<a href="images/sandbox.jpg" data-fluidbox>
+					<a href="#umd" data-fluidbox>
 						<img src="images/sandbox.jpg" alt=""></a>
 				</div><!-- p-item -->
 
 			<div class="p-item research">
-				<a href="images/cern.jpg" data-fluidbox>
+				<a href="#cern" data-fluidbox>
 					<img src="images/cern.jpg" alt=""></a>
 			</div><!-- p-item -->
 			
 			<div class="p-item work" id="workImg">
-				<a href="#" onclick="smoothScroll(document.getElementById('workEp'))" data-fluidbox>
+				<a href="#workExp" data-fluidbox>
 					<img src="images/atm.jpg" alt=""></a>
 			</div><!-- p-item -->
 			
 			<div class="p-item research">
-					<a href="images/sense.jpg" data-fluidbox>
+					<a href="#sense" data-fluidbox>
 						<img src="images/sense.jpg" alt=""></a>
 				</div><!-- p-item -->
 		
@@ -278,9 +280,11 @@
 					</div><!-- col-sm-4 -->
 					<div class="col-sm-8">
 						<div class="education-wrapper">
-							<div class="education margin-b-50">
+							<div class="education margin-b-50" id="ahrq">
 								<h4><b>AHRQ SDOH CHALLENGE</b></h4>
-								<h5 class="font-yellow"><b>DATA VISUALIZATION CHALLENGE</b></h5>
+								<h5 class="font-yellow">
+									<a href="https://www.ahrq.gov/sdoh-challenge/index.html" target="_blank"><b>DATA VISUALIZATION CHALLENGE</b></a>
+								</h5>
 								<h6 class="font-lite-black margin-t-10">MARCH 2019 - PRESENT</h6>
 								<p class="margin-tb-30">
 									The Agency for Healthcare Research and Quality (AHRQ) Visualization Resources of Community-Level Social Determinants of Health 
@@ -299,9 +303,11 @@
 									At the time of writing this, I am a Phase 1 winner of this challenge. </p>
 							</div><!-- education -->
 
-							<div class="education margin-b-50">
+							<div class="education margin-b-50" id="sense">
 									<h4><b>MONITORING THE ENVIRONMENT</b></h4>
-									<h5 class="font-yellow"><b>UMD ENVIRONMENTAL MONITORING LAB</b></h5>
+									<h5 class="font-yellow">
+										<a href="http://sense.umd.edu/" target="_blank"><b>UMD ENVIRONMENTAL MONITORING LAB</b></a>
+									</h5>
 									<h6 class="font-lite-black margin-t-10">OCTOBER 2018 - PRESENT</h6>
 									<p class="margin-tb-30">
 										This project aims to monitor environmental conditions using a low cost smart sensor network. 
@@ -310,7 +316,7 @@
 										and send back the recorded data to our central repository. </p>
 							</div><!-- education -->
 
-							<div class="education margin-b-50">
+							<div class="education margin-b-50" id="cern">
 								<h4><b>SEARCHING FOR THE KALUZA KLEIN</b></h4>
 								<h5 class="font-yellow"><b>UMD RESEARCH</b></h5>
 								<h6 class="font-lite-black margin-t-10">OCTOBER 2017 - MAY 2018</h6>
@@ -329,7 +335,7 @@
 			
 		</section><!-- about-section -->
 
-	<section class="education-section section">
+	<section class="education-section section" id="umd">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-4">
@@ -342,12 +348,13 @@
 					<div class="education-wrapper">
 						<div class="education margin-b-50">
 							<h4><b>UNIVERSITY OF MARYLAND, COLLEGE PARK</b></h4>
-							<h5 class="font-yellow"><b>DEGREE IN PHYSICS & COMPUTER SCIENCE</b></h5>
+							<h5 class="font-yellow"><b>PHYSICS & COMPUTER SCIENCE</b></h5>
 							<h6 class="font-lite-black margin-t-10">GRADUATING IN MAY 2021</h6>
-							<p class="margin-tb-30">Duis non volutpat arcu, eu mollis tellus. Sed finibus aliquam neque sit amet sodales. 
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla maximus pellentes que velit, 
-							quis consequat nulla effi citur at. Maecenas sed massa tristique.Duis non volutpat arcu, 
-							eu mollis tellus. Sed finibus aliquam neque sit amet sodales. </p>
+							<p class="margin-tb-30">
+								I have participated in several research projects in my time at UMD, and I have
+								joined as many clubs as I could. I worked briefly with the Terps Racing group 
+								on campus, I worked as a volunteer manager for Sandbox, and I'm a member of a 
+								Professional Techonlogy Fraternity on campus. </p>
 						</div><!-- education -->
 						
 
@@ -416,28 +423,30 @@
 	<script src="common-js/scripts.js"></script>
 
 	<script>
-		window.smoothScroll = function(target) {
-			var scrollContainer = target;
-			do { //find scroll container
-				scrollContainer = scrollContainer.parentNode;
-				if (!scrollContainer) return;
-				scrollContainer.scrollTop += 1;
-			} while (scrollContainer.scrollTop == 0);
-
-			var targetY = 0;
-			do { //find the top of target relatively to the container
-				if (target == scrollContainer) break;
-				targetY += target.offsetTop;
-			} while (target = target.offsetParent);
-
-			scroll = function(c, a, b, i) {
-				i++; if (i > 30) return;
-				c.scrollTop = a + (b - a) / 30 * i;
-				setTimeout(function(){ scroll(c, a, b, i); }, 20);
-			}
-			// start scrolling
-			scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
-		}
+	$(document).ready(function(){
+	  // Add smooth scrolling to all links
+	  $("a").on('click', function(event) {
+	
+		// Make sure this.hash has a value before overriding default behavior
+		if (this.hash !== "") {
+		  // Prevent default anchor click behavior
+		  event.preventDefault();
+	
+		  // Store hash
+		  var hash = this.hash;
+	
+		  // Using jQuery's animate() method to add smooth page scroll
+		  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+		  $('html, body').animate({
+			scrollTop: $(hash).offset().top
+		  }, 0, function(){
+	
+			// Add hash (#) to URL when done scrolling (default click behavior)
+			window.location.hash = hash;
+		  });
+		} // End if
+	  });
+	});
 	</script>
 	
 </body>
